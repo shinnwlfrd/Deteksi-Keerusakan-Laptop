@@ -843,7 +843,7 @@ def results_page():
     col_hist, col_new = st.columns(2)
     with col_hist:
         if st.button("Lihat Riwayat", type="secondary", key="btn_to_history"):
-            st.session_stage.page = "history"
+            st.session_state.page = "history"
             st.rerun()
     with col_new:
         if st.button("Diagnosa Baru", type="primary", key="btn_new_diag"):
