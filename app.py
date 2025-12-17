@@ -842,11 +842,11 @@ def results_page():
     
     col_hist, col_new = st.columns(2, gap="small")
     with col_hist:
-        if st.button("Lihat Riwayat", type="primary", key="btn_to_history"):
+        if st.button("Lihat Riwayat", type="primary", key="btn_to_history", use_container_width="True"):
             st.session_state.page = "history"
             st.rerun()
     with col_new:
-        if st.button("Diagnosa Baru", type="primary", key="btn_new_diag"):
+        if st.button("Diagnosa Baru", type="primary", key="btn_new_diag", use_container_width="True"):
             st.session_state.page = "symptoms"
             st.rerun()
 
