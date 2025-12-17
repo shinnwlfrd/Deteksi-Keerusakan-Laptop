@@ -609,11 +609,11 @@ def home_page():
     # Action Buttons (Primary)
     col_hist, col_kb = st.columns(2)
     with col_hist:
-        if st.button("Mulai Diagnosa", type="primary", key="btn_start"):
+        if st.button("Mulai Diagnosa", type="primary", key="btn_start", use_container_width="True"):
             st.session_state.page = "symptoms"
             st.rerun()
     with col_kb:
-        if st.button("Riwayat Diagnosa", type="primary", key="btn_hist"):
+        if st.button("Riwayat Diagnosa", type="primary", key="btn_hist", use_container_width="True"):
             st.session_state.page = "history"
             st.rerun()
         
@@ -706,7 +706,7 @@ def symptoms_page():
     st.markdown("<div style='height: 2rem'></div>", unsafe_allow_html=True)
     
     # Analyze Button
-    if st.button("Analisa Kerusakan", type="primary", key="btn_analyze"):
+    if st.button("Analisa Kerusakan", type="primary", key="btn_analyze", use_container_width="True"):
         if not selected:
             st.error("Harap pilih minimal satu gejala.")
         else:
@@ -745,7 +745,7 @@ def results_page():
         
         st.error("Gagal memuat hasil. Tidak ada diagnosa yang mencapai tingkat keyakinan yang memadai. Silakan ulangi.")
         
-        if st.button("Kembali ke Pemilihan Gejala", type="primary", key="btn_return_fail"):
+        if st.button("Kembali ke Pemilihan Gejala", type="primary", key="btn_return_fail", use_container_width="True"):
             st.session_state.page = "symptoms"
             st.rerun()
             
