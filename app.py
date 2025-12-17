@@ -840,7 +840,7 @@ def results_page():
 
     st.markdown("<div style='height: 2rem'></div>", unsafe_allow_html=True)
     
-    col_hist, col_new = st.columns(2)
+    col_hist, col_new = st.columns(2, gap="small")
     with col_hist:
         if st.button("Lihat Riwayat", type="primary", key="btn_to_history"):
             st.session_state.page = "history"
