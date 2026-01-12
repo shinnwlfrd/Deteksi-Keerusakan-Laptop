@@ -25,11 +25,11 @@ st.markdown("""
         }
         
         /* REMOVE STREAMLIT DEFAULT PADDING */
-        .block-container {
-            padding-top: 2rem;
-            padding-bottom: 5rem;
-            max-width: 700px;
-        }
+        # .block-container {
+        #     padding-top: 2rem;
+        #     padding-bottom: 5rem;
+        #     max-width: 700px;
+        # }
 
         /* CUSTOM UTILITIES */
         .glass-card {
